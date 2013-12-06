@@ -35,11 +35,11 @@ hi Conditional     guifg=#F92672               gui=bold
 hi Constant        guifg=#AE81FF               gui=bold
 hi Cursor          guifg=#000000 guibg=#F8F8F0
 hi Debug           guifg=#BCA3A3               gui=bold
-hi Define          guifg=#66D9EF
+hi Define          guifg=#76E9CF               gui=bold,italic
 hi Delimiter       guifg=#8F8F8F
-hi DiffAdd         guifg=#66FF2E guibg=#233526
-hi DiffChange      guifg=#E6DB74 guibg=#333526
-hi DiffDelete      guifg=#F92672 guibg=#402526
+hi DiffAdd                       guibg=#13354A
+hi DiffChange      guifg=#89807D guibg=#4C4745
+hi DiffDelete      guifg=#960050 guibg=#1E0010
 hi DiffText                      guibg=#4C4745 gui=italic,bold
 
 hi Directory       guifg=#A6E22E               gui=bold
@@ -49,19 +49,23 @@ hi Exception       guifg=#A6E22E               gui=bold
 hi Float           guifg=#AE81FF
 hi FoldColumn      guifg=#465457 guibg=#000000
 hi Folded          guifg=#465457 guibg=#000000
-hi Function        guifg=#A6E22E
+"hi Function        guifg=#A6E22E
+"hi Function        guifg=#D8BFD8
+hi Function        guifg=#FAFAD2
 hi Identifier      guifg=#FD971F
 hi Ignore          guifg=#808080 guibg=bg
 hi IncSearch       guifg=#C4BE89 guibg=#000000
 
-hi Keyword         guifg=#F92672               gui=bold
+hi Keyword         guifg=#F92692               gui=bold
 hi Label           guifg=#E6DB74               gui=none
 hi Macro           guifg=#C4BE89               gui=italic
+"hi SpecialKey      guifg=#2F3234
 
 hi MatchParen      guifg=#000000 guibg=#FD971F gui=bold
 hi ModeMsg         guifg=#E6DB74
 hi MoreMsg         guifg=#E6DB74
-hi Operator        guifg=#F92672
+"hi Operator        guifg=#F92672
+hi Operator        guifg=#D9D972
 
 " complete menu
 hi Pmenu           guifg=#66D9EF guibg=#000000
@@ -113,11 +117,10 @@ if s:molokai_original == 1
    hi LineNr          guifg=#BCBCBC guibg=#3B3A32
    hi NonText         guifg=#BCBCBC guibg=#3B3A32
 else
-   hi Normal          guifg=#F8F8F2 guibg=#1B1D1E
-   hi Comment         guifg=#89A0A6
-   hi CursorLine                    guibg=#293739
-   hi CursorColumn                  guibg=#293739
-   hi CursorLineNr    guifg=#BFBFBF guibg=#232526   gui=bold
+   hi Normal          guifg=#F8F2F8 guibg=#0B0D0E
+   hi Comment         guifg=#899596
+   hi CursorLine                    guibg=#302030
+   hi CursorColumn                  guibg=#302030
    hi LineNr          guifg=#BCBCBC guibg=#232526
    hi NonText         guifg=#007070 guibg=#232526
 end
@@ -141,9 +144,9 @@ if &t_Co > 255
    hi Define          ctermfg=81
    hi Delimiter       ctermfg=241
 
-   hi DiffAdd         ctermfg=46  ctermbg=22
-   hi DiffChange      ctermfg=190 ctermbg=58
-   hi DiffDelete      ctermfg=196 ctermbg=52
+   hi DiffAdd                     ctermbg=24
+   hi DiffChange      ctermfg=181 ctermbg=239
+   hi DiffDelete      ctermfg=162 ctermbg=53
    hi DiffText                    ctermbg=102 cterm=bold
 
    hi Directory       ctermfg=118               cterm=bold
@@ -161,6 +164,7 @@ if &t_Co > 255
    hi Keyword         ctermfg=161               cterm=bold
    hi Label           ctermfg=229               cterm=none
    hi Macro           ctermfg=193
+   "hi SpecialKey      ctermfg=81
 
    hi MatchParen      ctermfg=16  ctermbg=208 cterm=bold
    hi ModeMsg         ctermfg=229
@@ -209,7 +213,6 @@ if &t_Co > 255
    hi Comment         ctermfg=59
    hi CursorLine                  ctermbg=234   cterm=none
    hi CursorColumn                ctermbg=234
-   hi CursorLineNr    ctermfg=252 ctermbg=234   cterm=bold
    hi LineNr          ctermfg=250 ctermbg=234
    hi NonText         ctermfg=30  ctermbg=233
 
@@ -218,3 +221,4 @@ if &t_Co > 255
    hi ErrorTailSpace  ctermfg=219 ctermbg=89
 
 end
+
