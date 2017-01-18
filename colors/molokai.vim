@@ -85,10 +85,10 @@ hi SpecialComment  guifg=#465457               gui=bold
 hi Special         guifg=#66D9EF guibg=bg      gui=italic
 hi SpecialKey      guifg=#2F3234
 if has("spell")
-    hi SpellBad    guisp=#FF0000 gui=undercurl
-    hi SpellCap    guisp=#7070F0 gui=undercurl
-    hi SpellLocal  guisp=#70F0F0 gui=undercurl
-    hi SpellRare   guisp=#FFFFFF gui=undercurl
+    hi SpellBad    ctermbg=1 guisp=#1F0000 gui=undercurl
+    hi SpellCap    ctermbg=53 guisp=#07070F gui=undercurl
+    hi SpellLocal  ctermbg=13  guisp=#07070F gui=undercurl
+    hi SpellRare   ctermbg=0 guisp=#FFFFFF gui=undercurl
 endif
 hi Statement       guifg=#F92672               gui=bold
 hi StatusLine      guifg=#455354 guibg=fg
@@ -128,6 +128,10 @@ end
 hi Error80        guibg=#2E0010 guifg=#FFAFFF
 hi ErrorLeadSpace guibg=#3E0010
 hi ErrorTailSpace guibg=#3E0010
+
+"
+" Syntastic errors need a bit of tweaking
+hi SyntasticError term=reverse ctermbg=153 ctermfg=162 gui=bold guifg=#960050 guibg=#1E0010
 
 "
 " Support for 256-color terminal
