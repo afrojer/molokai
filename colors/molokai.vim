@@ -43,6 +43,9 @@ hi DiffDelete      guifg=#960050 guibg=#1E0010
 hi DiffText                      guibg=#4C4745 gui=italic,bold
 
 hi Directory       guifg=#A6E22E               gui=bold
+
+hi EnumConstant    guifg=#E6DB74
+
 hi Error           guifg=#960050 guibg=#1E0010
 hi ErrorMsg        guifg=#F92672 guibg=#232526 gui=bold
 hi Exception       guifg=#A6E22E               gui=bold
@@ -59,11 +62,18 @@ hi IncSearch       guifg=#C4BE89 guibg=#000000
 hi Keyword         guifg=#F92692               gui=bold
 hi Label           guifg=#E6DB74               gui=none
 hi Macro           guifg=#C4BE89               gui=italic
+
+" Any non-static member variable
+hi Member          guifg=#1FFD97               gui=italic
+
 "hi SpecialKey      guifg=#2F3234
 
 hi MatchParen      guifg=#000000 guibg=#FD971F gui=bold
 hi ModeMsg         guifg=#E6DB74
 hi MoreMsg         guifg=#E6DB74
+
+hi Namespace       guifg=#FD971F
+
 "hi Operator        guifg=#F92672
 hi Operator        guifg=#D9D972
 
@@ -103,6 +113,9 @@ hi Typedef         guifg=#66D9EF
 hi Type            guifg=#66D9EF               gui=none
 hi Underlined      guifg=#808080               gui=underline
 
+" Any non-member variable
+hi Variable        guifg=#2672F9
+
 hi VertSplit       guifg=#808080 guibg=#080808 gui=bold
 hi VisualNOS                     guibg=#403D3D
 hi Visual                        guibg=#403D3D
@@ -128,6 +141,13 @@ end
 hi Error80        guibg=#2E0010 guifg=#FFAFFF
 hi ErrorLeadSpace guibg=#3E0010
 hi ErrorTailSpace guibg=#3E0010
+
+"
+" Color-Coded clang type links
+hi link StructDecl Type
+hi link UnionDecl Type
+hi link ClassDecl Type
+hi link EnumDecl Type
 
 "
 " Syntastic errors need a bit of tweaking
