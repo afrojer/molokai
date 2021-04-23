@@ -72,7 +72,7 @@ hi MatchParen      guifg=#000000 guibg=#FD971F gui=bold
 hi ModeMsg         guifg=#E6DB74
 hi MoreMsg         guifg=#E6DB74
 
-hi Namespace       guifg=#FD971F
+hi Namespace       guifg=#A0522D               gui=bold
 
 "hi Operator        guifg=#F92672
 hi Operator        guifg=#D9D972
@@ -101,8 +101,17 @@ if has("spell")
     hi SpellRare   ctermbg=0 guisp=#FFFFFF gui=undercurl
 endif
 hi Statement       guifg=#F92672               gui=bold
+
 hi StatusLine      guifg=#455354 guibg=fg
+   hi StatusLineCol   ctermfg=27  ctermbg=233
+   hi StatusLineDbg   ctermfg=238 ctermbg=16
+   hi StatusLineFile  ctermfg=34  ctermbg=16
+   hi StatusLineFType ctermfg=253 ctermbg=16
+   hi StatusLineFunc  ctermfg=180 ctermbg=16
+   hi StatusLineGit   ctermfg=16  ctermbg=253
 hi StatusLineNC    guifg=#808080 guibg=#080808
+   hi StatusLineNm    ctermfg=252 ctermbg=16
+
 hi StorageClass    guifg=#FD971F               gui=italic
 hi Structure       guifg=#66D9EF
 hi Tag             guifg=#F92672               gui=italic
@@ -150,6 +159,12 @@ hi link ClassDecl Type
 hi link EnumDecl Type
 
 "
+" vim-lsp-cxx-highlight type links
+hi link LspCxxHlGroupEnumConstant EnumConstant
+hi link LspCxxHlGroupNamespace Namespace
+hi link LspCxxHlGroupMemberVariable Member
+
+"
 " Syntastic errors need a bit of tweaking
 hi SyntasticError term=reverse ctermbg=153 ctermfg=162 gui=bold guifg=#960050 guibg=#1E0010
 
@@ -171,9 +186,10 @@ if &t_Co > 255
    hi DiffAdd                     ctermbg=24
    hi DiffChange      ctermfg=181 ctermbg=239
    hi DiffDelete      ctermfg=162 ctermbg=53
-   hi DiffText                    ctermbg=102 cterm=bold
+   hi DiffText                    ctermbg=102   cterm=bold
 
    hi Directory       ctermfg=118               cterm=bold
+   hi EnumConstant    ctermfg=28                cterm=bold
    hi Error           ctermfg=219 ctermbg=89
    hi ErrorMsg        ctermfg=199 ctermbg=16    cterm=bold
    hi Exception       ctermfg=118               cterm=bold
@@ -187,13 +203,15 @@ if &t_Co > 255
 
    hi Keyword         ctermfg=161               cterm=bold
    hi Label           ctermfg=229               cterm=none
-   hi Macro           ctermfg=193
-   "hi SpecialKey      ctermfg=81
+   hi Macro           ctermfg=95
+   "hi Macro           ctermfg=193
 
    hi MatchParen      ctermfg=16  ctermbg=208 cterm=bold
+   hi Member          ctermfg=105             cterm=italic
    hi ModeMsg         ctermfg=229
    hi MoreMsg         ctermfg=229
-   hi Operator        ctermfg=161
+   hi Namespace       ctermfg=141
+   hi Operator        ctermfg=202
 
    " complete menu
    hi Pmenu           ctermfg=81  ctermbg=16
@@ -211,19 +229,27 @@ if &t_Co > 255
    hi SignColumn      ctermfg=118 ctermbg=235
    hi SpecialChar     ctermfg=161               cterm=bold
    hi SpecialComment  ctermfg=245               cterm=bold
-   hi Special         ctermfg=81
+   hi Special         ctermfg=61
    hi SpecialKey      ctermfg=235
 
    hi Statement       ctermfg=161               cterm=bold
    hi StatusLine      ctermfg=238 ctermbg=253
+   hi StatusLineCol   ctermfg=27  ctermbg=233
+   hi StatusLineDbg   ctermfg=238 ctermbg=16
+   hi StatusLineFile  ctermfg=34  ctermbg=16
+   hi StatusLineFType ctermfg=253 ctermbg=16
+   hi StatusLineFunc  ctermfg=180 ctermbg=16
+   hi StatusLineGit   ctermfg=16  ctermbg=253
    hi StatusLineNC    ctermfg=244 ctermbg=232
+   hi StatusLineNm    ctermfg=252 ctermbg=16
+
    hi StorageClass    ctermfg=208
    hi Structure       ctermfg=81
    hi Tag             ctermfg=161
    hi Title           ctermfg=166
    hi Todo            ctermfg=231 ctermbg=232   cterm=bold
 
-   hi Typedef         ctermfg=81
+   hi Typedef         ctermfg=75
    hi Type            ctermfg=81                cterm=none
    hi Underlined      ctermfg=244               cterm=underline
 
