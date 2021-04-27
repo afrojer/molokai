@@ -214,9 +214,9 @@ if &t_Co > 255
    hi Operator        ctermfg=202
 
    " complete menu
-   hi Pmenu           ctermfg=81  ctermbg=16
-   hi PmenuSel                    ctermbg=244
-   hi PmenuSbar                   ctermbg=232
+   hi Pmenu           ctermfg=40  ctermbg=16
+   hi PmenuSel        ctermfg=22  ctermbg=255  cterm=italic
+   hi PmenuSbar                   ctermbg=93
    hi PmenuThumb      ctermfg=81
 
    hi PreCondit       ctermfg=118               cterm=bold
@@ -233,15 +233,15 @@ if &t_Co > 255
    hi SpecialKey      ctermfg=235
 
    hi Statement       ctermfg=161               cterm=bold
-   hi StatusLine      ctermfg=238 ctermbg=253
-   hi StatusLineCol   ctermfg=27  ctermbg=233
-   hi StatusLineDbg   ctermfg=238 ctermbg=16
-   hi StatusLineFile  ctermfg=34  ctermbg=16
-   hi StatusLineFType ctermfg=253 ctermbg=16
-   hi StatusLineFunc  ctermfg=180 ctermbg=16
-   hi StatusLineGit   ctermfg=16  ctermbg=253
-   hi StatusLineNC    ctermfg=244 ctermbg=232
-   hi StatusLineNm    ctermfg=252 ctermbg=16
+   hi StatusLine      ctermfg=17  ctermbg=254   cterm=bold
+   hi StatusLineCol   ctermfg=33  ctermbg=54
+   hi StatusLineDbg   ctermfg=93  ctermbg=54
+   hi StatusLineFile  ctermfg=46  ctermbg=54
+   hi StatusLineFType ctermfg=105 ctermbg=54
+   hi StatusLineFunc  ctermfg=186 ctermbg=54
+   hi StatusLineGit   ctermfg=16  ctermbg=242
+   hi StatusLineNC    ctermfg=255 ctermbg=54
+   hi StatusLineNm    ctermfg=255 ctermbg=54
 
    hi StorageClass    ctermfg=208
    hi Structure       ctermfg=81
@@ -261,8 +261,8 @@ if &t_Co > 255
 
    hi Normal          ctermfg=252 ctermbg=233
    hi Comment         ctermfg=59
-   hi CursorLine                  ctermbg=234   cterm=none
-   hi CursorColumn                ctermbg=234
+   hi CursorLine                  ctermbg=235   cterm=none
+   hi CursorColumn                ctermbg=235
    hi LineNr          ctermfg=250 ctermbg=234
    hi NonText         ctermfg=30  ctermbg=233
 
